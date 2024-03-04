@@ -14,8 +14,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 80px;
-    background: whitesmoke;
+    padding: 7px 88px;
+    background: rgba(236, 230, 230, 0.922);
     box-shadow: 0 5px rgba(0, 0, 0, 0, 0.06);
 }
 
@@ -58,4 +58,69 @@ body {
     position: absolute;
     bottom: -4px;
     left: 20px;
+}
+
+
+/* textes handle */
+h1 {
+    font-size: 56px;
+    line-height: 65px;
+    color: black;
+}
+
+h2 {
+    font-size: 45px;
+    line-height: 55px;
+    color: black;
+}
+
+h4 {
+    font-size: 22px;
+    line-height: 65px;
+    color: black;
+}
+
+h6 {
+    font-weight: 700;
+    font-size: 13px;
+}
+
+p {
+    font-size: 17px;
+    margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+    padding: 40px 80px;
+}
+
+.section-m1 {
+    margin: 40px 0;
+}
+
+/* page home */
+#home {
+    background-image: url(img/imgpeluche.png);
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 70% right 0;
+    padding:0 88px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+}
+
+.intro {
+    /* text-align: justify; */
+    position: absolute;
+    bottom: 350px;
+    left: 660px;
+    width: 37%;
+    margin: 11px auto;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
