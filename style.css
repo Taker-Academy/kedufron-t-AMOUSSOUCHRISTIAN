@@ -42,7 +42,7 @@ body {
 
 #navbar li a{
     text-decoration: none;
-    font-size: 23px;
+    font-size: 23  px;
     font-weight: 600;
     color: #1a1a1a;
     transition: 0.3s ease;
@@ -64,6 +64,15 @@ body {
     left: 20px;
 }
 
+#mobile{
+    display: none;
+    align-items: center;
+}
+
+#close{
+    display: none;
+}
+
 
 /* textes handle */
 h1 {
@@ -74,13 +83,13 @@ h1 {
 
 h2 {
     font-size: 45px;
-    line-height: 55px;
+    line-height: 45px;
     color: black;
 }
 
 h4 {
     font-size: 22px;
-    line-height: 65px;
+    line-height: 30px;
     color: black;
 }
 
@@ -108,19 +117,42 @@ p {
     background-position: top 70% right 0;
     padding:0 88px;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     align-items: flex-start;
-    justify-content: center;
+    justify-content: space-between;
     text-align: center;
 }
 
+#content {
+    display: flex;
+margin-top: 5%;
+}
+
+#content-left {
+    display: flex;
+    flex-direction: column;
+    /* background-color: red; */
+}
+
+#content-right {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    /* margin: 50px; */
+    /* background-color: rgb(0, 21, 255); */
+
+}
+
+#content-center {
+    margin-left: 50px;
+    width: 98%;
+    display: flex;
+    flex-direction: column;
+    /* background-color: rgb(255, 0, 221); */
+
+}
+
 .intro {
-    position: relative;
-    bottom: 289px;
-    left: 84px;
-    width: 37%;
-    margin: 11px auto;
-    padding: 15px;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
@@ -135,14 +167,10 @@ p {
 
 #home button {
     background-color: transparent;
-    border: 0;
-    color: rgb(217, 168, 108);
-    position: relative;
-    left: 830px;
     font-weight: bold;
-    padding: 15px 24px;
-    font-size: 25px;
-    border: 1px solid rgba(158, 154, 154, 0.696);
+    padding: 9px 10px;
+    font-size: 20px;
+    border: 1px solid rgba(227, 212, 212, 0.696);
     border-radius: 20px;
     color: rgb(0, 0, 0);
     text-align: center;
@@ -166,7 +194,7 @@ p {
 #container .card {
     background-color: rgb(193, 182, 187);
     width: 20vw;
-    height: 20vw;
+    height: 24vw;
     margin: 20px;
     cursor: pointer;
     box-shadow: rgb(0, 0, 0, 0.02);
@@ -191,6 +219,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    background-color: #9c9494;
 }
 
 footer .column{
@@ -203,11 +232,14 @@ footer .column{
 footer .columncash img {
     width: 6vw;
 }
-
-footer .copyright {
+footer .foot-right {
     display: flex;
     flex-direction: column;
+}
+footer .foot-right .copyright {
+    align-self: flex-end;
     text-align: end;
+
 }
 
 footer h4{
@@ -230,30 +262,81 @@ footer p{
 
 footer .logo {
     display: flex;
-    width: 12vw;
-    position: relative;
-    margin-bottom: 10px;
-    /* right: -800px; */
+    width: 9vw;
+    margin-top: 10px;
 }
 
 
 
-
-
-
-
-
 /* RESPONSIVE */
-@media (max-width:799) {
+@media (max-width:790px) {
     #navbar {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
         position: fixed;
-        right: 0;
+        right: -300px;
         top: 0;
         height: 100vh;
         width: 300px;
+        background: rgba(236, 230, 230, 0.922);
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.11);
+        padding: 80px 0 0 10px;
+    }
+
+    #navbar li {
+        margin-bottom: 23px;
+    }
+
+    #navbar.active {
+        right: 0px;
+    }
+
+    #mobile {
+        display: flex;
+        align-items: center;
+    }
+    #mobile i {
+        color: #1a1a1a;
+        font-size: 23px;
+        padding-left: 19px;
+    }
+    #close {
+        display: initial;
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        color: #1a1a1a;
+        font-size: 23px;
+    }
+    #cart_laptop {
+        display: none;
+    }
+
+    #home {
+        height: 70vh;
+        padding: 0 80px;
+        background-position: top 30% right 30%;
+    }
+
+    #content-left {
+        width: 20%;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #content-center {
+        margin-left: 42px;
+        width: 50vw;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 65px;
+        padding: 0 20px;
+    }
+    #container {
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        justify-content: space-between;
     }
 }
